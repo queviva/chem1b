@@ -271,16 +271,27 @@ function makeRxnTableA () {
 makeRxnTableA();
 makeRxnTableA();
 makeRxnTableA();
+
 // }
 
-// solving rxn table {
+// solving rxn rate table {
     
 function solveRxnTable () {
     
-    let order = ~~(Math.random() * 4);
-    let conc = (1 + Math.random() * 3);
-    let rate = (Math.random() / 10);
-    let inc  = [[2, 3],[.5, .25],[2,.5]][~~(Math.random()*3)];
+    let ansA = [0,1,2];
+    let ansB = [0,1,2];
+    
+    let orderA = ~~(Math.random() * 3);
+    let orderB = ~~(Math.random() * 3);
+    
+    let incA = [2,3][~~(Math.random() * 2)];
+    let incB = [2,3,4][~~(Math.random() * 3)];
+
+    let rateC = (
+        Math.random() * Math.pow(10, (-5 - ~~(Math.random() * 3)))
+    );
+    let rateA = rateC * Math.pow(incA, orderA);
+    let rateB = rateA * Math.pow(incB, orderB);
     
     let ans = [`
   <style>td{ border: 1px solid black; }</style>
@@ -288,8 +299,8 @@ function solveRxnTable () {
     font-size:10px;
     line-height:12px;
   ">
-  <table style="width:100%;text-align:center;">
-   <tr><td colspan="4" style="height:14px;"></tr>
+  <table style="margin:auto;width:90%;text-align:center;">
+   <tr><td colspan="4" style="border:none;height:14px;"></tr>
    <tr><td colspan="4"><b>aA + bB &rarr; cC</b></td></tr>
    <tr>
     <td><i>Trial</i></td>
@@ -297,29 +308,58 @@ function solveRxnTable () {
     <td>[B]</td>
     <td>Rate &Delta;[C]</td></tr>
    </tr>
-   <tr><td>#1</td><td>2</td><td>1</td><td>#.##e-6</td></tr>
-   <tr><td>#2</td><td>1</td><td>1</td><td>#.##e-7</td></tr>
-   <tr><td>#3</td><td>2</td><td>3</td><td>#.##e-6</td></tr>
+   <tr>
+    <td>#1</td>
+    <td>${ incA }</td>
+    <td>1</td>
+    <td>${ rateA.toExponential(2) }</td>
+   </tr>
+   <tr>
+    <td>#2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>${ rateC.toExponential(2) }</td>
+   </tr>
+   <tr>
+    <td>#3</td>
+    <td>${ incA }</td>
+    <td>${ incB }</td>
+    <td>${ rateB.toExponential(2) }</td>
+   </tr>
   </table>
   <br>
   <b style="font-size:18px;">
-  rxn rate is <i>what</i> order with respect to [A] ?
+  R = k[A]<sup><i>?</i></sup>[B]<sup><i>?</i></sup>
   </b>
   </div>
 `];
-    ans.push(choices[order]);
-    for (let i = 0, j = choices.length; i < j; i++) {
-        if (i !== order) {
-            ans.push(choices[i]);
+    
+    // remove the correct orders from the possible answers
+    ansA.splice(orderA,1);
+    ansB.splice(orderB,1);
+    
+    // push the correct answer onto the ans array
+    ans.push(
+        'k[A]<sup>'+orderA+'</sup>[B]<sup>'+orderB+'</sup>'
+    );
+
+    
+    for (let i = 0; i < 2; i++) {
+        for (let j = 0; j < 2; j++) {
+            ans.push(
+                'k[A]<sup>'+ansA[i]+'</sup>[B]<sup>'+ansB[j]+'</sup>'
+            );
         }
     }
 
     initialQuestions.push(ans);
-    return ans;//(0.000212).toExponential();
+    //return ansA +' '+ansB;//(0.000212).toExponential();
 }
 
-
-document.body.innerHTML = (solveRxnTable());
+solveRxnTable();
+solveRxnTable();
+solveRxnTable();
+//document.body.innerHTML = (solveRxnTable());
 
 // }
 
