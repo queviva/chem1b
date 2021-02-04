@@ -1,0 +1,115 @@
+@font-face {
+  font-family: AlteHaasGroteskRegular;
+  src: url("AlteHaasGroteskRegular.ttf");
+}
+
+
+#redX {
+  top: 195px;
+}
+
+
+
+/*
+#introductionBackground {
+  position: absolute;
+  width: 695px;
+  height: 510px;
+  background-color: #777;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+*/
+
+.introductionTitle {
+  height: 53px;
+  width: 537px;
+  top: 85px;
+  left: 79px;
+  background-image: url("ultimatenamingmatch.png");
+}
+
+#nameCardPic {
+  position: absolute;
+  width: 259px;
+  height: 180px;
+  top: 170px;
+  left: 75px;
+  background-image: url("NaBrO.png");
+}
+
+#introductionDescription {
+  top: 185px;
+  width: 265px;
+  left: 365px;
+  color: #FFFFFF;
+  font-family: AlteHaasGroteskRegular, Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+
+
+.questionCardFront {
+  background-image: url("blankcard450125.png");
+}
+
+.questionCardBack {
+  background-image: url("compoundnamecard.png");
+}
+  
+.choiceCardFront {
+  background-image: url("blankcard310135.png");
+}
+
+.choiceCardBack {
+  background-image: url("formulacard.png");
+}
+
+#questionCard, .questionCardFront, .questionCardBack {
+  width: 450px;
+  height: 125px;
+}
+
+#leftChoiceCard, #rightChoiceCard, .choiceCardFront, .choiceCardBack {
+  width: 310px;
+  height: 135px;
+}
+
+#questionOutput {
+  line-height: 125px;
+  font-size: 33px;
+}
+    
+#leftChoiceOutput, #rightChoiceOutput {
+  line-height: 135px;
+  font-size: 32px;
+}
+
+
+#questionCardDescription {
+  width: 400px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  left: 136px;
+  text-align: center;
+}
+
+#leftCardDescription, #rightCardDescription {
+  width: 160px;
+  height: 45px;
+  position: absolute;
+  top: 358px;
+  text-align: center;
+}
+
+#leftCardDescription {
+  left: 101px;
+}
+
+#rightCardDescription {
+  right: 97px;
+}
