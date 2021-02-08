@@ -33,6 +33,20 @@ var incorrectDelay = 0.7;
 
 var initialQuestions = [
     
+  // enthalpy {
+  
+    ['<i>enthalpy is...</i>',
+        'the energy IN things',
+        '[just learn for now]'
+    ],
+    
+    ['in an EXOthermic reaction...',
+        '&Delta;H is NEGATIVE',
+        '[just learn for now]'
+    ],
+      
+  // }
+    
   // log rules {
   
   ['log(a &middot; b) =', // product rule
@@ -334,9 +348,12 @@ function solveRxnTable () {
   </div>
 `];
     
-    // remove the correct orders from the possible answers
-    ansA.splice(orderA,1);
-    ansB.splice(orderB,1);
+    // remove the correct orders from ONE of the possible answers
+    if (Math.random() > 0.5) {
+        ansA.splice(orderA, 1);
+    } else {
+        ansB.splice(orderB, 1);
+    }
     
     // push the correct answer onto the ans array
     ans.push(
@@ -344,8 +361,8 @@ function solveRxnTable () {
     );
 
     
-    for (let i = 0; i < 2; i++) {
-        for (let j = 0; j < 2; j++) {
+    for (let i = 0; i < ansA.length; i++) {
+        for (let j = 0; j < ansB.length; j++) {
             ans.push(
                 'k[A]<sup>'+ansA[i]+'</sup>[B]<sup>'+ansB[j]+'</sup>'
             );
