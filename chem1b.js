@@ -30,8 +30,43 @@ var RIGHTXLEFT = "415px";
 var correctDelay = 0.1;
 var incorrectDelay = 0.7;
 
+(document.body.appendChild((document.createElement('style')))).innerText
+= `
+.ratSM {
+    font-size:14px;
+    line-height:16px;
+    width:90%;
+}
+`;
 
 var initialQuestions = [
+    
+  // equilibrium {
+  
+  [
+   `
+<div class="ratSM"><br>
+Reaction Quotient (Q<sub>c</sub>)<br>
+at <i>some time</i> (t) from<br>
+a[A] + b[B] &rlhar; c[C] + d[D]
+</div>
+   `,
+  ['products/reactants',
+   '[C]<sup>c</sup>[D]<sup>d</sup>/[A]<sup>a</sup>[B]<sup>b</sup>'
+  ][~~(Math.random()*2)],
+    '[C]<sup>1</sup>[D]<sup>2</sup>/[A]<sup>3</sup>[B]<sup>4</sup>',
+    '[A]<sup>a</sup>[B]<sup>b</sup>/[C]<sup>c</sup>[B]<sup>b</sup>',
+  ],
+  
+  ['Q<sub><i>c</i></sub> = K<sub><i>eq</i></sub>',
+   'at equilibrium',
+   'for inert reactions',
+   'for gasses',
+   'for (aq) solutions',
+   '&uarr;product conc.'
+  ],
+  
+  //}
     
   // enthalpy {
   
@@ -160,7 +195,43 @@ var initialQuestions = [
   
   // }
   
-  // rate laws {
+  // integrated rate laws {
+  [`<div class="ratSM"><br>
+  Integrated Rate Laws tell you<br>
+  the Concentration at some time [A]<sub>t</sub><br>
+  `,
+  'true','false'
+  ],
+  
+  ['0<sup>th</sup>ord int. rate',
+   '[A]<sub>t</sub> = -kt + [A]<sub>0</sub>',
+   'ln[A]<sub>t</sub> = -kt + ln[A]<sub>0</sub>',
+   '1/[A]<sub>t</sub> = kt + 1/[A]<sub>0</sub>',
+   '1/[A]<sub>t</sub> = -kt + 1/[A]<sub>0</sub>',
+   '[A]<sub>t</sub> = kt + [A]<sub>0</sub>'
+  ],
+  
+
+  ['1<sup>st</sup>ord int. rate',
+   'ln[A]<sub>t</sub> = -kt + ln[A]<sub>0</sub>',
+   '[A]<sub>t</sub> = -kt + [A]<sub>0</sub>',
+   '1/[A]<sub>t</sub> = kt + 1/[A]<sub>0</sub>',
+   '1/[A]<sub>t</sub> = -kt + 1/[A]<sub>0</sub>',
+   '[A]<sub>t</sub> = kt + [A]<sub>0</sub>'
+  ],
+  
+
+  ['2<sup>nd</sup>ord int. rate',
+   '1/[A]<sub>t</sub> = kt + 1/[A]<sub>0</sub>',
+   '[A]<sub>t</sub> = -kt + [A]<sub>0</sub>',
+   'ln[A]<sub>t</sub> = -kt + ln[A]<sub>0</sub>',
+   '1/[A]<sub>t</sub> = -kt + 1/[A]<sub>0</sub>',
+   '[A]<sub>t</sub> = kt + [A]<sub>0</sub>'
+  ],
+  
+  // }
+  
+  // rate law tables {
   [`
   <div style="
     font-size:10px;
@@ -200,7 +271,14 @@ var initialQuestions = [
   
   // catalyst {
     ['a <i>catalyst</i> will ...',
-        ['&uarr;Rate of rxn','&darr;Ea'][~~(Math.random()*2)],
+        '&darr;Ea',
+        '&uarr;&Delta;H',
+        '&darr;&Delta;E',
+        '&uarr;&Delta;G',
+        '&darr;K'
+    ],
+    ['a <i>catalyst</i> will ...',
+        '&uarr;Rate of rxn',
         '&uarr;&Delta;H',
         '&darr;&Delta;E',
         '&uarr;&Delta;G',
@@ -233,6 +311,7 @@ var initialQuestions = [
 
 ];
 
+/*
 // advanced rxn rate order question {
 const choices = 'zero-ith first second third'.split(' ');
 function makeRxnTableA () {
@@ -379,6 +458,7 @@ solveRxnTable();
 //document.body.innerHTML = (solveRxnTable());
 
 // }
+*/
 
 // {
 var directions = {
