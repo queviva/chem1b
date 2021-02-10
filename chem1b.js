@@ -311,7 +311,6 @@ a[A] + b[B] &rlhar; c[C] + d[D]
 
 ];
 
-/*
 // advanced rxn rate order question {
 const choices = 'zero-ith first second third'.split(' ');
 function makeRxnTableA () {
@@ -458,7 +457,6 @@ solveRxnTable();
 //document.body.innerHTML = (solveRxnTable());
 
 // }
-*/
 
 // {
 var directions = {
