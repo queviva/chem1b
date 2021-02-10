@@ -28,7 +28,7 @@ var RIGHTXLEFT = "415px";
 // these variables can be later changed
 // based on user preference and also performance
 var correctDelay = 0.1;
-var incorrectDelay = 0.7;
+var incorrectDelay = 0.1;
 
 (document.body.appendChild((document.createElement('style')))).innerText
 = `
