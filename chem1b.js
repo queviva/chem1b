@@ -131,10 +131,10 @@ a[A] + b[B] &rlhar; c[C] + d[D]
   ],
   
   ['if a = b<sup>x</sup> then x = ...', // alg with logs
-    'log<sub>b</sub>(a)',
+    'ln(a)/ln(b)',
     'log<sub>a</sub>(b)',
-    'a<sup>b</sup>',
-    'a<sup>log(b)</sup>'
+    'a<sup>x</sup>',
+    'a &middot; ln(b)'
   ],
 
   ['if ln(x) = a then x = ...', // alg with logs
@@ -360,9 +360,6 @@ function makeRxnTableA () {
     initialQuestions.push(ans);
     return ans;//(0.000212).toExponential();
 }
-makeRxnTableA();
-makeRxnTableA();
-makeRxnTableA();
 
 // }
 
@@ -451,12 +448,23 @@ function solveRxnTable () {
     //return ansA +' '+ansB;//(0.000212).toExponential();
 }
 
-solveRxnTable();
-solveRxnTable();
-solveRxnTable();
 //document.body.innerHTML = (solveRxnTable());
 
 // }
+
+makeRxnTableA();
+makeRxnTableA();
+makeRxnTableA();
+makeRxnTableA();
+makeRxnTableA();
+solveRxnTable();
+solveRxnTable();
+solveRxnTable();
+solveRxnTable();
+solveRxnTable();
+solveRxnTable();
+solveRxnTable();
+
 
 // {
 var directions = {
