@@ -286,7 +286,28 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     ],
   // }
   
-  // some constants {
+  // some constants and conversions {
+  
+  ['from Kelvin to C<sup>&deg;</sup>...',
+   '- 273<sup>&deg;</sup>',
+   'x 237<sup>&deg;</sup>',
+   '+ 723<sup>&deg;</sup>',
+   '+ 273<sup>&deg;</sup>'
+  ],
+
+  ['from C<sup>&deg;</sup> to Kelvin...',
+   '+ 273<sup>&deg;</sup>',
+   '+ 237<sup>&deg;</sup>',
+   '+ 723<sup>&deg;</sup>',
+   '- 273<sup>&deg;</sup>'
+  ],
+
+  ['1 atm = ???',
+   '760 torr',
+   '670 torr',
+   '1776 torr',
+   '706 torr'
+  ],
       
   ["<i>mole ... = </i>",
   '6.022 x 10<sup>23</sup>',
@@ -296,6 +317,7 @@ a[A] + b[B] &rlhar; c[C] + d[D]
   "2.9979 x 10<sup>8</sup>"
   ],
   
+  /*
   ["<i>g... gravity = </i>",
   "9.806 m/s<sup>2</sup>",
   "9.608 m/s<sup>2</sup>",
@@ -303,6 +325,7 @@ a[A] + b[B] &rlhar; c[C] + d[D]
   "10.06 ms",
   "9.806 ms<sup>2</sup>"
   ],
+  */
   
   // last line has no coma
   ["ratmaster", "I am", "you are", "we are", "they be"]
