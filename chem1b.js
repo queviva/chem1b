@@ -31,22 +31,23 @@ var correctDelay = 0.1;
 var incorrectDelay = 0.1;
 
 (document.body.appendChild((document.createElement('style')))).innerText
-    = `
-.ratSM {
-    font-size:14px;
-    line-height:16px;
-    width:90%;
-}
-`;
+    = `.ratSM {font-size:14px;line-height:16px;width:90%;}`;
 
 var initialQuestions = [
 
-    // gas law {
+    // gas law & R values {
     ['Ideal Gas Law is ...',
         'PV = <i>n</i>RT',
         '<i>u</i>R&alpha; = <i>PRVT</i>',
         'RT = <i>V</i>RT',
         'P/V = T'
+    ],
+        
+    ['For P in Joules, R =',
+        '8.314 Joules/molK',
+        '8.314 atmL/molK',
+        '0.08205 atmL/molK',
+        '<span class="ratSM">R = 62.36 mmHgL/molK'
     ],
     
     ['For P in kPa, R =',
@@ -74,7 +75,7 @@ var initialQuestions = [
 
     //}
 
-    // arrhenius equation {
+    // arrhenius equations {
     [
         'Arrhenius Equation',
         'k = A&middot;e<sup>-Ea/RT</sup>',
@@ -82,9 +83,16 @@ var initialQuestions = [
         'k = A&middot;e<sup>-RT/Ea</sup>',
         'k = ln(A)&middot;e<sup>-Ea/RT</sup>',
     ],
+    
+    [
+        'Linear Arrhenius Eq.',
+        '<span class="ratSM">ln(k) = (-Ea/R)&middot;(1/T) + ln(A)',
+        'k = A&middot;e<sup>-RT/Ea</sup>',
+        'ln(A) = e<sup>Ea/RT</sup'
+    ],
 
     [
-        'Arrhenius Equation',
+        '2Temp Arrhenius Eq.',
         '<span class="ratSM">ln(k<sub>2</sub>/k<sub>1</sub>) = -(Ea/R) &middot; (1/T<sub>2</sub>-1/T<sub>1</sub>)',
         '<span class="ratSM">ln(k<sub>1</sub>/k<sub>2</sub>) = -(Ea/R) &middot; (1/T<sub>1</sub>-1/T<sub>2</sub>)',
         '<span class="ratSM">ln(k<sub>2</sub>/k<sub>1</sub>) = -(Ea/R) &middot; (1/T<sub>2</sub>+1/T<sub>1</sub>)',
@@ -132,7 +140,7 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     ],
 
     // }
-
+*/
     // log rules {
 
     ['log(a &middot; b) =', // product rule
@@ -281,7 +289,7 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     ],
 
     // }
-
+/*
     // rate law tables {
     [`
   <div style="
@@ -391,6 +399,51 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     // }
     
 ];
+/*
+// exam1 review generators {
+
+let examOneGen = () => {
+    
+    let
+    R = 8.3145,
+    initP = 23.8, //vapor pressure of water
+    initT = (20 + Math.random() * 8).toFixed(0),
+    ABvol = (180 + Math.random() * 60).toFixed(0),
+    initV = ABvol,
+    Konst = (Math.random() / 10).toFixed(4),
+    ABMolo = Math.random().toFixed(1),
+    finalV = (ABvol - 10 * Math.random()).toFixed(1),
+    finalP = (500 + 500 * Math.random()).toFixed(1);
+    
+    let msg =`<div class="ratSM"><br>
+    AB(aq) -> A(g) + B(g) @${ initT }<sup>&deg;</sup>C
+    <br>
+    ${ ABvol }ml of ${ ABMolo }M AB disolve over water<br>
+    at what <i>time</i> will there be ${ finalV }ml of product<br>
+    at a pressure of ${ finalP }mmHg?<br>
+    <span style="font-size:8px">
+    vapor pressure of H<sub>2</sub>O = 23.8 mmHg
+    </span>
+    `;
+    
+    // ok, PV = nRT, so number of moles is n = PV/RT
+    //
+    let n = (initP * initV) / (R * initT);
+    
+    let Q = [msg,'true','false'];
+    
+    initialQuestions.push(Q);
+};
+
+examOneGen();
+examOneGen();
+examOneGen();
+examOneGen();
+examOneGen();
+
+    
+//}
+*/
 
 /*
 // advanced rxn rate order question {
@@ -555,6 +608,7 @@ solveRxnTable();
 solveRxnTable();
 //}
 */
+
 // {
 var directions = {
 
