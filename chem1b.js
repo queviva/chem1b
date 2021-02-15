@@ -261,6 +261,14 @@ a[A] + b[B] &rlhar; c[C] + d[D]
   `,
         'true', 'false'
     ],
+    
+
+    [`<div class="ratSM"><br>
+    Partial Pressures can be used<br>
+    in the Integrated Rate Law
+  `,
+        'true', 'false'
+    ],
 
     ['0<sup>th</sup>ord int. rate',
         '[A]<sub>t</sub> = -kt + [A]<sub>0</sub>',
