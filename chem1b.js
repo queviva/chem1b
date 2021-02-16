@@ -100,7 +100,6 @@ var initialQuestions = [
     ],
     //}
 
-    /*
     // equilibrium {
 
     [
@@ -140,7 +139,7 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     ],
 
     // }
-*/
+    
     // log rules {
 
     ['log(a &middot; b) =', // product rule
@@ -297,7 +296,7 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     ],
 
     // }
-/*
+    
     // rate law tables {
     [`
   <div style="
@@ -353,7 +352,6 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     ],
     // }
 
-    */
     // some constants and conversions {
     ['relation between K<sub>p</sub> an K<sub>c</sub>',
         'K<sub>p</sub> = K<sub>c</sub>(RT)<sup>&Delta;n</sup>',
@@ -407,6 +405,7 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     // }
     
 ];
+
 /*
 // exam1 review generators {
 
@@ -436,24 +435,17 @@ let examOneGen = () => {
     
     // ok, PV = nRT, so number of moles is n = PV/RT
     //
-    let n = (initP * initV) / (R * initT);
+    let n = (initP * initV) / (R * (initT + 273));
     
     let Q = [msg,'true','false'];
     
-    initialQuestions.push(Q);
+    //initialQuestions.push(Q);
 };
-
-examOneGen();
-examOneGen();
-examOneGen();
-examOneGen();
-examOneGen();
 
     
 //}
 */
 
-/*
 // advanced rxn rate order question {
 const choices = 'zero-ith first second third'.split(' ');
 
@@ -615,7 +607,6 @@ solveRxnTable();
 solveRxnTable();
 solveRxnTable();
 //}
-*/
 
 // {
 var directions = {
