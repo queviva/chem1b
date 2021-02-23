@@ -1,12 +1,96 @@
-<html>
+<!doctype html><html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+@font-face {
+  font-family: lucky;
+  src: url(lucky.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    --color: #99b;
+    --back: hsl(0,90%,90%);
+    
+    background-color: var(--back);
+    
+}
+
+.holder {
+	position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 700px;
+    color: var(--color);
+    font-size: 40px;
+    padding: 10px;
+    padding:10px;
+    text-align: center;
+}
+
+a, a:visited {
+    color: var(--col);
+    text-decoration: none;
+}
+
+a:active {
+    font-weight: bold;
+}
+
+#tit {
+    width: 100%;
+    text-align: center;
+    color: #99b;
+    padding: 10px;
+    font-family: 'lucky';
+    font-size: 80px;
+    letter-spacing: 0px;
+    background: linear-gradient(0deg, #99b, 50%, #fff 65%);
+    -webkit-text-stroke: 5px var(--color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inact {
+    color: hsla(0,0%,0%,0.05);
+}
+
+/*possibly a portrait mobi-fone*/
+@media screen and (max-width:500px) {
+    #tit {
+        font-size: 60px;
+         -webkit-text-stroke: 1px var(--color);
+    }
+}
+
+/*possibly a mobile landscaper*/
+@media screen
+    and (orientation: landscape)
+    and (max-width: 760px)
+    {
+    
+    
+}
+
+</style>
 
 <body>
+<div class="holder">
 
-	<ul>
-		<li><a href="part1.html">part 1</a>
-		<li><a href="part2.html">part 2</a>
+	    <div id="tit">CHEM 1B</div>
+		<a href="part1.html">Part 1</a><br>
+		<a href="part2.html">Part 2</a><br>
+		<span class="inact">Part 3</span><br>
+		<span class="inact">Part 4</span><br>
+		<span class="inact">Part 5</span><br>
 	</ul>
-
+	
+</div>
 </body>
 
 </html>
