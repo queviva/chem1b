@@ -34,7 +34,301 @@ var incorrectDelay = 0.1;
     = `.ratSM {font-size:14px;line-height:16px;width:90%;}`;
 
 var initialQuestions = [
+    
+    // strong bases {
+    ['LiOH','lithium hydroxide','lithium hydrogen','lithium acetate'],
+    ['LiOH','strong base','weak base','strong acid','weak acid'],
+    ['lithium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['lithium hydroxide','LiOH','Li(OH)<sub>2</sub>','LiH<sub>2</sub>'],
+    
+    ['NaOH','sodium hydroxide','sodium hydrogen','natric acid'],
+    ['NaOH','strong base','weak base','strong acid','weak acid'],
+    ['sodium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['sodium hydroxide','NaOH','Na(OH)<sub>2</sub>','NaO<sup>+</sup>'],
+    
+    ['KOH','potassium hydroxide','potassium hydrate','kalium hydroxide'],
+    ['KOH','strong base','weak base','strong acid','weak acid'],
+    ['potassium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['potassium hydroxide','KOH','POH','K(OH)<sub>2</sub>'],
+    
+    ['RbOH','rubidium hydroxide','ruben hydroxstein','rubium hydroxide'],
+    ['ROH','strong base','weak base','strong acid','weak acid'],
+    ['rubidium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['rubidium hydroxide','RbOH','Rb(OH)<sub>2</sub>','Rb<sub>2</sub>H'],
+    
+    ['CsOH','caesium hydroxide','caesarium hydroxide','calcium hydrate'],
+    ['CsOH','strong base','weak base','strong acid','weak acid'],
+    ['caesium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['caesium hydroxide','CsOH','Cs(OH)<sub>2</sub>','Cs<sub>2</sub>HO'],
 
+    ['Mg(OH)<sub>2</sub>','magnesium&nbsp;hydroxide','magnum hydroxide','magnate hybride'],
+    ['Mg(OH)<sub>2</sub>','strong base','weak base','strong acid','weak acid'],
+    ['magnesium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['magnesium hydroxide','Mg(OH)<sub>2</sub>','MgOH','Mg<sub>2</sub>HO'],
+
+    ['Ca(OH)<sub>2</sub>','calcium hydroxide','calcium hydride','calomine hydride'],
+    ['Ca(OH)<sub>2</sub>','strong base','weak base','strong acid','weak acid'],
+    ['calcium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['calcium hydroxide','Ca(OH)<sub>2</sub>','CaOH','Ca<sub>2</sub>HO'],
+    
+    ['Sr(OH)<sub>2</sub>','strontium hydroxide','strontium hydride','strongs hydride'],
+    ['Sr(OH)<sub>2</sub>','strong base','weak base','strong acid','weak acid'],
+    ['strontium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['strontium hydroxide','Sr(OH)<sub>2</sub>','SrOH','S(OH)<sub>2</sub>'],
+
+    ['Ba(OH)<sub>2</sub>','barium hydroxide','barium hydride','barium hidryde'],
+    ['Ba(OH)<sub>2</sub>','strong base','weak base','strong acid','weak acid'],
+    ['barium hydroxide','strong base','weak base','strong acid','weak acid'],
+    ['barium hydroxide','Ba(OH)<sub>2</sub>','BaOH','Ba<sub>2</sub>OH'],
+    
+    //}
+    
+    // strong acids {
+    ['HCl','strong acid','strong base','weak acid','weak base'],
+    ['HCl','hydrochloric acid','hydrogen chlorate','hydric acid'],
+    ['hydrochloic acid','strong acid','strong base','weak acid','weak base'],
+    ['hydrochloric acid','HCl','HCl<sub>2</sub>','H<sub>2</sub>CLO'],
+    
+    ['HBr','strong acid','strong base','weak acid','weak base'],
+    ['HBr','hydrobromic acid','hydrogen bromide','bromic acid'],
+    ['hydrobromic acid','strong acid','strong base','weak acid','weak base'],
+
+    ['hydrobromic acid','HBr','HBr<sub>2</sub>','HBm'],
+
+    ['HI','strong acid','strong base','weak acid','weak base'],
+    ['HI','hydroiodic acid','iodine hydroxide','iodic acid'],
+    ['hydroiodic','strong acid','strong base','weak acid','weak base'],
+    ['hydroiodic acid','HI','HIo','I(OH)<sub>2</sub>'],
+
+    ['HClO<sub>3</sub>','strong acid','strong base','weak acid','weak base'],
+    ['HClO<sub>3</sub>','chloric acid','hydrochloric acid','hydrogen chloride'],
+    ['chloric acid','strong acid','strong base','weak acid','weak base'],
+
+    ['chloric acid',
+        'HClO<sub>3</sub>',
+        'HClO<sub>4</sub>',
+        'HClO<sub>2</sub>',
+        'HClO',
+        'HCLO<sub>3</sub>'],
+        
+    ['HClO<sub>4</sub>','strong acid','strong base','weak acid','weak base'],
+    ['HClO<sub>4</sub>','perchloric&nbsp;acid','hydrochloric acid','chlorous acid','chloric acid'],
+    ['perchloric acid','strong acid','strong base','weak acid','weak base'],
+    ['perchloric acid',
+        'HClO<sub>4</sub>',
+        'HClO<sub>3</sub>',
+        'HClO<sub>2</sub>',
+        'HClO'],
+
+    ['HNO<sub>3</sub>','strong acid','strong base','weak acid','weak base'],
+    ['HNO<sub>3</sub>','nitric acid','nitrous acid','hydrogen nitrate'],
+    ['nitric acid','strong acid','strong base','weak acid','weak base'],
+    ['nitric acid',
+    'HNO<sub>3</sub>',
+    'HNO<sub>2</sub>',
+    'H<sub>2</sub>NO<sub>4</sub>',
+    'HNO'
+    ],
+    
+    ['H<sub>2</sub>SO<sub>4</sub>','strong acid','strong base','weak acid','weak base'],
+    ['H<sub>2</sub>SO<sub>4</sub>','sulfuric acis','hydrogen sulfate','hydrosulfic acid'],
+    ['sulfuric acid','strong acid','strong base','weak acid','weak base'],
+    ['sulfuric acid',
+    'H<sub>2</sub>SO<sub>4</sub>',
+    'H<sub>4</sub>SO<sub>2</sub>',
+    'H<sub>2</sub>SO',
+    'HSO<sub>4</sub>',
+    'HSO'
+    ],
+
+    //}
+
+    // weak acids {
+    ['CH<sub>3</sub>COOH','acetic acid','acetate','formic acid'],
+    ['CH<sub>3</sub>COOH','weak acid','weak base','strong acid','strong base'],
+    ['acetic acid','weak acid','weak base','strong acid','strong base'],
+    ['acetic acid',
+        'CH<sub>3</sub>COOH',
+        'CH<sub>2</sub>COOH',
+        'HCOOH',
+        'HA'
+    ],
+    
+    ['HCOOH','formic acid','acetate','acetic acid'],
+    ['HCOOH','weak acid','weak base','strong acid','strong base'],
+    ['formic acid','weak acid','weak base','strong acid','strong base'],
+    ['formic acid',
+        'HCOOH',
+        'CH<sub>3</sub>COOH',
+        'CH<sub>2</sub>COOH',
+        'H<sub>2</sub>SOH<sup>-</sup>',
+        'HF'
+    ],
+
+    ['HF','hydroflouric&nbsp;acid','formic acid','acetic acid'],
+    ['HF','weak acid','weak base','strong acid','strong base'],
+    ['hydroflouric&nbsp;acid','weak acid','weak base','strong acid','strong base'],
+    ['hydroflouric&nbsp;acid',
+        'HF',
+        'HCOOH',
+        'CH<sub>3</sub>COOH',
+        'CH<sub>2</sub>COOH',
+        'H<sub>2</sub>SOH<sup>-</sup>'
+    ],
+
+    ['HCN','hydrocyanic&nbsp;acid','hydrogen&nbsp;cyanide','acetic acid'],
+    ['HCN','weak acid','weak base','strong acid','strong base'],
+    ['hydrocyanic&nbsp;acid','weak acid','weak base','strong acid','strong base'],
+    ['hydrocyanic&nbsp;acid',
+        'HCN',
+        'HCNOH',
+        'CHNO<sub>3</sub>',
+        'H<sub>2</sub>NOH<sup>-</sup>'
+    ],
+
+    ['HNO<sub>2</sub>','nitrous&nbsp;acid','hydrogen&nbsp;nitriide','nitric acid'],
+    ['HNO<sub>2</sub>','weak acid','weak base','strong acid','strong base'],
+    ['nitrous&nbsp;acid','weak acid','weak base','strong acid','strong base'],
+    ['nitrous&nbsp;acid',
+        'HNO<sub>2</sub>',
+        'HNO<sub>3/sub>',
+        'HNO',
+        'HCNOH',
+        'CH<sub>3</sub>NOOH',
+        'H<sub>2</sub>NO<sub>4</sub>'
+    ],
+
+    ['HSO<sub>4</sub><sup>-</sup>','hydrogen&nbsp;sulfate&nbsp;ion','hydrogen&nbsp;sulfate','sulfuric acid'],
+    ['HSO<sub>4</sub><sup>-</sup>','weak acid','weak base','strong acid','strong base'],
+    ['hydrogen&nbsp;sulfate&nbsp;ion','weak acid','weak base','strong acid','strong base'],
+    ['hydrognen&nbsp;sulfate&nbsp;ion',
+        'HSO<sub>4</sub><sup>-</sup>',
+        'HSO<sub>3</sub><sup>-</sup>',
+        'HSO',
+        'H<sub>2</sub>SOH<sub>4</sub>'
+    ],
+
+    //}
+    
+    // weak bases {
+    
+    ['NH<sub>3</sub>','ammonia','ammonium','ammonium hydroxide'],
+    ['NH<sub>3</sub>','weak base','strong base','weak acid','strong acid'],
+    ['ammonia','weak base','strong base','weak acid','strong acid'],
+    ['ammonia',
+     'NH<sub>3</sub>',
+     'NH<sub>4</sub>',
+     'NH<sub>4</sub>OH',
+     'HNO<sub>4</sub>'
+    ],
+
+    ['NH<sub>4</sub>OH','ammonium hydroxide','ammonium','ammonia'],
+    ['NH<sub>4</sub>OH','weak base','strong base','weak acid','strong acid'],
+    ['ammonium hydroxide','weak base','strong base','weak acid','strong acid'],
+    ['ammonium hydroxide',
+     'NH<sub>4</sub>OH',
+     'NH<sub>3</sub>',
+     'NH<sub>4</sub>',
+     'HNO<sub>4</sub>'
+    ],
+
+    ['C<sub>5</sub>H<sub>5</sub>N','pyridine','carboxlyic acid','methylammonia'],
+    ['C<sub>5</sub>H<sub>5</sub>N','weak base','strong base','weak acid','strong acid'],
+    ['pyridine','weak base','strong base','weak acid','strong acid'],
+    ['pyridine',
+     'C<sub>5</sub>H<sub>5</sub>N',
+     'CH<sub>3</sub>COOH',
+     'HCOOH',
+     'NH<sub>4</sub><sup>+</sup>',
+     'HPO<sub>3</sub>'
+    ],
+    
+    ['CO<sub>3</sub><sup>2-</sup>','carbonate ion','carboxylic acid','carbonate','hydronium'],
+    
+    ['CO<sub>3</sub><sup>2-</sup>','weak base','strong base','weak acid','strong acid'],
+    ['carbonate ion','weak base','strong base','weak acid','strong acid'],
+    ['carbonate ion',
+     'CO<sub>3</sub><sup>2-</sup>',
+     'CO<sub>2</sub><sup>3-</sup>',
+     'CO<sub>3</sub><sup>-</sup>',
+     'CO<sub>2</sub><sup>-</sup>'
+    ],
+        
+    //}
+    
+    /*
+    // pH pOH pKa pKb pKw {
+    
+    [`<div class="ratSM"><br>
+    acid HA dissociates as:<br>
+    HA &rarr; H<sup>+</sup> + A<sup>-</sup><br>
+    what is the K<sub><i>a</i></sub>
+    </div>
+     `,
+     'Ka = [A<sup>-</sup>][H<sub>3</sub>O<sup>+</sup>]/[HA]'
+    
+    ],
+    
+    ['lower pH means...',
+     'higher hydronium',
+     'higher acetate',
+     'lower acidity',
+     'lower H<sup>+</sup>'
+    ],
+    
+    ['pH is ...',
+     '-log([H<sub>3</sub>O<sup>+</sup>])',
+     '-log([OH<sup>+</sup>])',
+     'log([H<sub>2</sub>O])',
+     'log([H<sup>-</sup>])'
+    ],
+        
+    ['pOH is ...',
+     '-log([OH<sup>-</sup>])',
+     '-log([H<sup>+</sup>])',
+     'log([H<sub>2</sub>O])',
+     'log([H<sup>-</sup>])'
+    ],
+    
+    ['acids are ...',
+    'proton (H+) donors',
+    'bases'
+    ],
+    
+    ['pKa is ...',
+     '-log(K<sub>a</sub>)',
+     'polyvinyl acetate'
+     ],
+
+    //}
+    */
+    
+    /*
+    
+    // free energy {
+    ['&Delta;G',
+     '= &Delta;H - T&middot;&Delta;S',
+     'false'
+     ],
+     
+    ['&Delta;G<sup>o</sup>',
+     '= -RT &middot; ln(k<sub><i>eq</i></sub>)',
+     'false'
+    ],
+    
+    ['&Delta;G<sup>o</sup>',
+     'Gibbs Free Energy',
+     'change in enthalpy',
+     'change in entropy',
+     'change in temp.'
+    ],
+    
+    ['Gibbs Free Energy',
+    'measured in joules',
+    'measured in kPa'
+    ],
+    //}
+    
     // gas law & R values {
     ['Ideal Gas Law is ...',
         'PV = <i>n</i>RT',
@@ -389,7 +683,6 @@ a[A] + b[B] &rlhar; c[C] + d[D]
         "2.9979 x 10<sup>8</sup>"
     ],
 
-    /*
     ["<i>g... gravity = </i>",
     "9.806 m/s<sup>2</sup>",
     "9.608 m/s<sup>2</sup>",
@@ -397,13 +690,15 @@ a[A] + b[B] &rlhar; c[C] + d[D]
     "10.06 ms",
     "9.806 ms<sup>2</sup>"
     ],
+    //}
     */
-
-    // last line has no coma
+    
+    // last line has no coma {
     ["ratmaster", "I am", "you are", "we are", "they be"]
 
     // }
-    
+
+
 ];
 
 /*
@@ -446,6 +741,7 @@ let examOneGen = () => {
 //}
 */
 
+/*
 // advanced rxn rate order question {
 const choices = 'zero-ith first second third'.split(' ');
 
@@ -607,6 +903,7 @@ solveRxnTable();
 solveRxnTable();
 solveRxnTable();
 //}
+*/
 
 // {
 var directions = {
