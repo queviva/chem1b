@@ -88,7 +88,7 @@ var initialQuestions = [
     // strong acids {
     ['HCl','strong acid','strong base','weak acid','weak base'],
     ['HCl','hydrochloric acid','hydrogen chlorate','hydric acid'],
-    ['hydrochloic acid','strong acid','strong base','weak acid','weak base'],
+    ['hydrochloric acid','strong acid','strong base','weak acid','weak base'],
     ['hydrochloric acid','HCl','HCl<sub>2</sub>','H<sub>2</sub>CLO'],
     
     ['HBr','strong acid','strong base','weak acid','weak base'],
