@@ -35,6 +35,8 @@ var incorrectDelay = 0.1;
 
 var initialQuestions = [
     
+    // add methyl ammonium
+    
     // strong bases {
     ['LiOH','lithium hydroxide','lithium hydrogen','lithium acetate'],
     ['LiOH','strong base','weak base','strong acid','weak acid'],
@@ -52,7 +54,7 @@ var initialQuestions = [
     ['potassium hydroxide','KOH','POH','K(OH)<sub>2</sub>'],
     
     ['RbOH','rubidium hydroxide','ruben hydroxstein','rubium hydroxide'],
-    ['ROH','strong base','weak base','strong acid','weak acid'],
+    ['RbOH','strong base','weak base','strong acid','weak acid'],
     ['rubidium hydroxide','strong base','weak base','strong acid','weak acid'],
     ['rubidium hydroxide','RbOH','Rb(OH)<sub>2</sub>','Rb<sub>2</sub>H'],
     
@@ -257,6 +259,20 @@ var initialQuestions = [
     //}
     
     // pH pOH pKa pKb pKw {
+    
+    ['K<sub>w</sub>',
+     '1.0 x 10<sup>-14</sup>',
+     '0.1 x 10<sup>-14</sup>',
+     '1.0 x 10<sup>14</sup>',
+     '1.0'
+    ],
+    
+    ['K<sub>w</sub>',
+    'K<sub>a</sub>&middot;K<sub>b</sub>',
+    'K<sub>a</sub> / K<sub>b</sub>',
+    'K<sub>b</sub> / K<sub>a</sub>',
+    '1/K<sub>b</sub>'
+    ],
     
     [`<div class="ratSM"><br>
     acid HA dissociates as:<br>
